@@ -17,6 +17,7 @@ return new class extends Migration
             $table->integer('age');
             $table->char('gender');
             $table->text('course');
+            $table->string('email');
             $table->timestamps();
         });
     }
