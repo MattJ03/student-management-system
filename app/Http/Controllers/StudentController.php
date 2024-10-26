@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Student;
 
 
+
 class StudentController extends Controller
 
 {
@@ -81,6 +82,7 @@ class StudentController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $student = Student::findOrFail($id);
+        $student->delete();
     }
 }
